@@ -613,7 +613,8 @@ app.post('/register', (req, res) => { register.handledRegister(req, res, db, bcr
 app.get('/', (req, res) => {
 	//res.send(['I am Ming Server!!! This is the Root Directory: http://localhost:2900/', 'Glad to see you here!!!']);
 	// send all user information to the Request Web Browser
-	res.send(database.users);
+	//res.send(database.users);
+	res.send("I am Ming Database in HeroKu Server");
 })
 
 // Profile Endpoint - get user info by it id
