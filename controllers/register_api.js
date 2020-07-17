@@ -46,9 +46,10 @@ const handledRegister = (req, res, db, bcrypt) => {
 
 	// Lecture 313 - Validation of registeration user data
 	// This is to check all email, name ans password is not empty or null
-	if(!email || !name || !password) {
-		return res.status(400).json('Invalid Register Data');
-	}
+	
+	// if(!email || !name || !password) {
+	// 	return res.status(400).json('Invalid Register Data');
+	// }
 
 
 	// Below is the Asynchronous Bcrypt Method

@@ -21,7 +21,7 @@ const profile = require('./controllers/profile_api.js');
 const image = require('./controllers/image_api.js');
 
 // This is just to clear the console screen whenever we restart the server
-console.clear();
+//console.clear();
 
 // const db = require('knex')({
 //   client: 'pg',
@@ -43,7 +43,7 @@ console.clear();
 //     database : 'smart-brain'
 //   }
 // });//postgresql-defined-32131
-
+//postgresql-defined-32131
 const db = require('knex')({
   client: 'pg',
   connection: {
@@ -60,8 +60,7 @@ const db = require('knex')({
 
 
 
-console.log("Welcome I a Ming, This is my HEROKU Database Server App")
-
+console.log("Welcome I a Ming Ming, This is my HEROKU Database Server App");
 // Using res.json because Express support this method and it has more function 
 // Signin Endpoint is for user to signin into the page
 // Therefore we are going to check whatever the user have enter on the front end 
