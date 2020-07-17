@@ -27,7 +27,7 @@ const handleApiCall = (req, res) => {
 
 
 
-const handledImage = (req, res, db) => {
+const handleImage = (req, res, db) => {
 	// Whenever a POST Request API is use we can only retrieve the parameter from the body
 	// For this case we will get the user ID from the Body 
 	// instead from the query string attached to the uRL
@@ -49,6 +49,6 @@ const handledImage = (req, res, db) => {
 }
 
 module.exports = {
-	handledImage: handledImage,
+	handleImage: handleImage,
 	handleApiCall: handleApiCall
 };
