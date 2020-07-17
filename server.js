@@ -34,13 +34,21 @@ console.clear();
 // });//postgresql-defined-32131
 
 // Lecture 318 - Create and Connecting to Heroku Database
+// const db = require('knex')({
+//   client: 'pg',
+//   connection: {
+//     host : 'postgresql-defined-32131',
+//     user : 'postgres',
+//     password : 'test',
+//     database : 'smart-brain'
+//   }
+// });//postgresql-defined-32131
+
 const db = require('knex')({
   client: 'pg',
   connection: {
-    host : 'postgresql-defined-32131',
-    user : 'postgres',
-    password : 'test',
-    database : 'smart-brain'
+    host : process.env.DATABASE_URL,
+    ssl: true,
   }
 });//postgresql-defined-32131
 
