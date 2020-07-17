@@ -372,7 +372,7 @@ Objective: Designing of our Endpoint and API
 // Referring to Lecture 311 - We can pass in the Knex, bcrypt, req and res to the handledRegister function in the controller folder
 // This is known as Dependencies Injection
 //app.post('/register', register_api.handledRegister)
-app.post('/register', (req, res) => { register.handledRegister(req, res, db, bcrypt) })
+app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 
 // app.post('/register', (req,res) => {
 // 	//res.send('You are in Register Page!!!');
