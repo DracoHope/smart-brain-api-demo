@@ -46,7 +46,7 @@ const handledRegister = (req, res, db, bcrypt) => {
 
 	// Lecture 313 - Validation of registeration user data
 	// This is to check all email, name ans password is not empty or null
-	
+
 	// if(!email || !name || !password) {
 	// 	return res.status(400).json('Invalid Register Data');
 	// }
@@ -130,10 +130,12 @@ const handledRegister = (req, res, db, bcrypt) => {
 	//   // nor any of the books inserts will have taken place.
 	//   console.error(error);
 	// });
-
+	email = 'ming@gmail.com';
+	name = 'ming'
 	// Using Knex Transaction
 	// The 'trx' is a parameter represent the transaction
 	db.transaction(trx => {
+		console.log('IN THE REGISTER INSERT QUERY')
 		// The first transaction we want to insert into the login table
 		trx.insert({
 			hash: hash,
@@ -149,7 +151,7 @@ const handledRegister = (req, res, db, bcrypt) => {
 						//email: loginEmail,	// The return 'loginEmail is an Array so we need to specified
 											// loginEmail[0] else we will get this '{"April@yahoo.com"} 
 											// instead of just "April@yahoo.com"
-						email: loginEmail[0],
+						email: email,
 						joined: new Date()
 				  }).then(user => {
 					res.json(user[0]);
@@ -158,7 +160,7 @@ const handledRegister = (req, res, db, bcrypt) => {
 		 .then(trx.commit)
 	    .catch(trx.rollback);
 	})
-	.catch(err => res.status(400).json('Create User Unsuccessful!!!'))
+	.catch(err => res.status(400).json('Why Create User Unsuccessful!!!'))
 
 				// return db('users')
 				// .returning('*')
