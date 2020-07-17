@@ -4,7 +4,8 @@
 //Or
 // Both work fine
 // This below syntax is for using Method 1 in Server.js
-const handledSignin = (db, bcrypt) => (req, res) => {
+//handleSignin
+const handleSignin = (db, bcrypt) => (req, res) => {
 	console.clear();
 
 const { email, password } = req.body;
@@ -98,5 +99,5 @@ const { email, password } = req.body;
 // 	  .catch(err => res.status(400).json('Wrong Password'));
 
 module.exports = {
-	handledSignin: handledSignin
+	handleSignin: handleSignin
 };
