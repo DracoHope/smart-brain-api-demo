@@ -52,15 +52,15 @@ const db = require('knex')({
   }
 });//postgresql-defined-32131
 
-db.select('*').from('users').then(data => {
-	console.log(data);
-});
+// db.select('*').from('users').then(data => {
+// 	console.log(data);
+// });
 
 //console.log(postgres.select('*').from('users'));
 
 
 
-console.log("Welcome this is my Express Server App")
+console.log("Welcome I a Ming, This is my HEROKU Database Server App")
 
 // Using res.json because Express support this method and it has more function 
 // Signin Endpoint is for user to signin into the page
@@ -71,37 +71,37 @@ console.log("Welcome this is my Express Server App")
 // Therefore we need a Database. 
 // Since currently we do not have a database then we can just create a variable for now
 
-const database = {
+// const database = {
 
-	users: [
+// 	users: [
 
-		{
-			id: '123',
-			name: 'John',
-			email: 'john@gmail.com',
-			password: '123',
-			entries: 0,
-			joined: new Date()
-		},
-		{
-			id: '124',
-			name: 'Serene',
-			email: 'serene@gmail.com',
-			password: '888',
-			entries: 0,
-			joined: new Date()
-		}
-	],
+// 		{
+// 			id: '123',
+// 			name: 'John',
+// 			email: 'john@gmail.com',
+// 			password: '123',
+// 			entries: 0,
+// 			joined: new Date()
+// 		},
+// 		{
+// 			id: '124',
+// 			name: 'Serene',
+// 			email: 'serene@gmail.com',
+// 			password: '888',
+// 			entries: 0,
+// 			joined: new Date()
+// 		}
+// 	],
 
-	login: [
-		{
-			id: '',
-			hash: '',
-			email: ''
-		}
-	]
+// 	login: [
+// 		{
+// 			id: '',
+// 			hash: '',
+// 			email: ''
+// 		}
+// 	]
 
-}
+// }
 
 const app = express();
 
