@@ -23,16 +23,26 @@ const image = require('./controllers/image_api.js');
 // This is just to clear the console screen whenever we restart the server
 console.clear();
 
+// const db = require('knex')({
+//   client: 'pg',
+//   connection: {
+//     host : '127.0.0.1',
+//     user : 'postgres',
+//     password : 'test',
+//     database : 'smart-brain'
+//   }
+// });//postgresql-defined-32131
 
+// Lecture 318 - Create and Connecting to Heroku Database
 const db = require('knex')({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-defined-32131',
     user : 'postgres',
     password : 'test',
     database : 'smart-brain'
   }
-});
+});//postgresql-defined-32131
 
 db.select('*').from('users').then(data => {
 	console.log(data);
