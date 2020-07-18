@@ -37,7 +37,7 @@ const image = require('./controllers/image_api.js');
 //   }
 // });//postgresql-defined-32131
 
-const db = require('knex')({
+const db = knex({
   client: 'pg',
   connection: {
     connectionString : process.env.DATABASE_URL,
@@ -61,8 +61,9 @@ app.get('/', (req, res) => {
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
 //app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) })
 
-
-app.post('/signin', signin.handleSignin(db, bcrypt))
+//handleSignin
+app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) })
+//app.post('/signin', signin.handleSignin(req, res, db, bcrypt))
 //app.post('/signin', signin.handledSignin(db, bcrypt))
 
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
