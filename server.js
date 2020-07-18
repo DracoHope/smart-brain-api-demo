@@ -29,13 +29,21 @@ const image = require('./controllers/image_api.js');
 //   }
 // });
 
+// const db = require('knex')({
+//   client: 'pg',
+//   connection: {
+//     connectionString : process.env.DATABASE_URL,
+//     ssl: true,
+//   }
+// });//postgresql-defined-32131
+
 const db = require('knex')({
   client: 'pg',
   connection: {
     connectionString : process.env.DATABASE_URL,
     ssl: true,
   }
-});//postgresql-defined-32131
+});//postgresql-defined-3213
 
 const app = express();
 
